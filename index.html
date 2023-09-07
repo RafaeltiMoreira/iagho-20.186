@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== FONT AWESOME ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>Iagho Sousa | 20.186</title>
+  <meta property="og:title" content="Nome do Site">
+
+  <!-- Descrição do site -->
+  <meta name="description" content="Escreva a descrição do site aqui.">
+  <meta itemprop="description" content="Escreva a descrição do site aqui.">
+  <meta property="og:description" content="Escreva a descrição do site aqui.">
+
+  <!-- Cor tema do site -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-navbutton-color" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+
+  <!-- GOOGLE FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicons do site -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="./assets/favicons/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicons/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="./assets/favicons/favicon.ico">
+  <meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
+
+  <!-- Tamanho imagem compartilhamento -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:type" content="website">
+  <meta property="og:card" content="summary_large_image">
+
+  <!-- Imagem de compartilhamento -->
+  <meta name="image" content="./assets/favicons/favicon-194x194.png">
+  <meta itemprop="image" content="./assets/favicons/favicon-194x194.png">
+  <meta property="og:image" content="./assets/favicons/favicon-194x194.png">
+
+  <!-- Nome do Site -->
+  <meta name="author" content="Rafael Moreira">
+  <meta itemprop="name" content="Nome do Site">
+  <meta name="article:author" content="Rafael Moreira">
+  <meta name="application-name" content="Conselheiro Tutelar - Iagho Sousa - 20.186">
+  <meta property="og:site_name" content="Conselheiro Tutelar - Iagho Sousa - 20.186">
+  <meta name="apple-mobile-web-app-title" content="Conselheiro Tutelar - Iagho Sousa - 20.186">
+
+</head>
+
+<body>
+  <!--==================== STYLE SWITCHER ====================-->
+  <input type="radio" name="color" id="color-1" />
+  <input type="radio" name="color" id="color-2" />
+  <input type="radio" name="color" id="color-3" />
+  <input type="radio" name="color" id="color-4" />
+  <input type="radio" name="color" id="color-5" />
+  <input type="radio" name="color" id="color-6" />
+  <input type="radio" name="color" id="color-7" />
+  <input type="radio" name="color" id="color-8" />
+  <input type="radio" name="color" id="color-9" />
+  <input type="radio" name="color" id="color-10" />
+  <input type="checkbox" id="toggler">
+  <input type="checkbox" id="day-night">
+  <input type="button" id="style-whats">
+
+  <div class="style__switcher">
+    <label for="toggler" class="style__switcher-toggler">
+      <i class="fa-solid fa-gear" title="Configurar cor do site"></i>
+    </label>
+
+    <label for="day-night" class="style__switcher-theme">
+      <i class="fa-solid fa-sun" title="Desativar tema escuro"></i>
+      <i class="fa-solid fa-moon" title="Desativar tema claro"></i>
+    </label>
+    <label for="style-whats" class="style__switcher-whats-switcher">
+      <div class="custom-button-whats-switcher">
+        <a href="https://wa.me/556182577964" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </label>
+
+    <h3 class="style__switcher-title">Cores do site</h3>
+    <div class="style__switcher-colors">
+      <label for="color-1" class="color-1 color"></label>
+      <label for="color-2" class="color-2 color"></label>
+      <label for="color-3" class="color-3 color"></label>
+      <label for="color-4" class="color-4 color"></label>
+      <label for="color-5" class="color-5 color"></label>
+      <label for="color-6" class="color-6 color"></label>
+      <label for="color-7" class="color-7 color"></label>
+      <label for="color-8" class="color-8 color"></label>
+      <label for="color-9" class="color-9 color"></label>
+      <label for="color-10" class="color-10 color"></label>
+    </div>
+  </div>
+
+  <!--==================== HEADER ====================-->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Iagho <span class="nav__logo__span">20.186</span></a>
+
+      <ul class="nav__list mobile-menu">
+        <li class="nav__item">
+          <a href="#home" class="nav__link active-link">Início</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#about" class="nav__link">Iagho</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#services" class="nav__link">?????</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#propostas" class="nav__link">Propostas</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#vote" class="nav__link">Locais de votação</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contato</a>
+        </li>
+      </ul>
+
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__content">
+          <span class="home__small">Conselheiro Tutelar</span>
+          <h1 class="home__title">Iagho Sousa<br />
+            <a href="#" class="btn-num">20.186</a>
+          </h1>
+
+          <p class="home__description">
+            Minha missão como candidato é de apoio, orientação, promoção social da família, dedicação para proteger e
+            garantir os direitos das nossas crianças e adolescentes.
+          </p>
+
+          <div class="home__btns">
+            <a href="#about" class="btn">Saiba mais</a>
+            <a href="#propostas" class="btn btn--transparent">Propostas</a>
+          </div>
+        </div>
+
+        <div class="home__img-wrapper">
+          <img src="assets/img/saiba-mais.png" alt="Foto do candidato Iagho" class="home__img">
+        </div>
+      </div>
+
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__img-wrapper">
+          <img src="assets/img/quemsou.jpg" alt="" class="about__img">
+        </div>
+
+        <div class="about__content">
+          <h2 class="section__title" data-title="Sobre mim">
+            Venha conhecer mais sobre minhas propostas, ajudem e façam parte da campanha do conselho de amigo. 🤟🏻
+          </h2>
+
+          <p class="about__description">
+            Morador do Guará, empreendedor, cristão católico, pregador e coordenador do grupo de jovens. Defensor dos
+            valores da família e defesa das crianças e adolescentes, além de desempenhar diversos trabalhos sociais e
+            ajuda para famílias carentes.
+          </p>
+
+          <ul class="about__data grid">
+            <li class="data__item">
+              <h3 class="data__title">Nome:</h3>
+              <span class="data__description">Iagho Sousa</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">Idade:</h3>
+              <span class="data__description">30 anos</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">Cidade:</h3>
+              <span class="data__description">Guará, DF</span>
+            </li>
+
+            <li class="data__item">
+              <h3 class="data__title">E-mail:</h3>
+              <span class="data__description about__link">iagho20186@gmail.com</span>
+            </li>
+          </ul>
+
+          <div class="about__bottom">
+            <!--<a href="" class="btn">Download</a>-->
+            <a href="#propostas" class="btn">Propostas</a>
+
+            <div class="about__social-links">
+              <a href="https://wa.me/556182577964" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a href="https://www.instagram.com/iaghosousa/" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.facebook.com/iaghosousa" target="_blank" class="about__social-link">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== SERVICES ====================-->
+    <section class="services section" id="services">
+      <h2 class="section__title title-center" data-title="Iagho 20.186 eu vou votar!">Conheçam minhas propostas</h2>
+
+      <div class="services__container container grid">
+        <div class="services__item">
+          <i class="fa-solid fa-pen-to-square services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">01</span>
+        </div>
+
+        <div class="services__item">
+          <i class="fa-solid fa-laptop services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">02</span>
+        </div>
+
+        <div class="services__item">
+          <i class="fa-solid fa-chart-area services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">03</span>
+        </div>
+
+        <div class="services__item">
+          <i class="fa-solid fa-pen-to-square services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">04</span>
+        </div>
+
+        <div class="services__item">
+          <i class="fa-solid fa-laptop services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">05</span>
+        </div>
+
+        <div class="services__item">
+          <i class="fa-solid fa-chart-area services__icon"></i>
+
+          <h3 class="services__title">Suplente de Conselheiro</h3>
+          <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi sit
+            earum molestias dignissimos blanditiis amet fugiat quaerat officia vel?</p>
+
+          <span class="services__no">06</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECO -->
+    <section class="preco" id="vote">
+      <div class="titulo">
+        <h2>Locais de votação</h2>
+        <p>Conforme publicação no Diário Oficial do Distrito Federal Nº 167, página 98, sexta-feira, 01 de setembro de
+          2023.</p>
+        <a href="https://agenciabrasilia.df.gov.br/wp-conteudo/uploads/2023/09/edital-16.pdf" target="_blank"
+          class="teste">Abrir</a>
+      </div>
+
+      <div class="quadros">
+
+        <div class="quadro dois">
+          <h3>Guará I</h3>
+          <h2>Quem votou nos locais abaixo 👇🏻</h2>
+          <div class="item">
+
+            <p>Centro de Ensino Fundamental 2</p>
+          </div>
+          <div class="item">
+
+            <p>Centro Educacional 4</p>
+          </div>
+          <div class="item">
+
+            <p>Centro de Ensino Médio 01 (GG)</p>
+          </div>
+          <div class="item">
+
+            <p>CILG - Centro Interescolar de Línguas</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 1</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 3</p>
+          </div>
+          <div class="item">
+            <h2>Agora para Conselho Tutelar seu voto será aqui 🗳️</h2>
+          </div>
+          <div class="item">
+            <button>
+              Centro de Ensino Médio 01 (GG)
+            </button>
+          </div>
+        </div>
+
+        <div class="quadro dois">
+          <h3>Guará I</h3>
+          <h2>Quem votou nos locais abaixo 👇🏻</h2>
+          <div class="item">
+
+            <p>Centro de Ensino Especial 1</p>
+          </div>
+          <div class="item">
+
+            <p>Centro de Ensino Fundamental 1</p>
+          </div>
+          <div class="item">
+
+            <p>Centro De Ensino Fundamental 4</p>
+          </div>
+          <div class="item">
+
+            <p>Colégio Projeção</p>
+          </div>
+          <div class="item">
+
+            <p>Colégio Elite (antiga Faculdade Jk)</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 2</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 5</p>
+          </div>
+          <div class="item">
+            <h2>Agora para Conselho Tutelar seu voto será aqui 🗳️</h2>
+          </div>
+          <div class="item">
+            <button>
+              Centro de Ensino Fundamental 1
+            </button>
+          </div>
+        </div>
+
+        <div class="quadro dois">
+          <h3>Guará II</h3>
+          <h2>Quem votou nos locais abaixo 👇🏻</h2>
+          <div class="item">
+
+            <p>Centro de Ensino Fundamental 5</p>
+          </div>
+          <div class="item">
+
+            <p>Centro Educacional 1</p>
+          </div>
+          <div class="item">
+
+            <p>Colégio Rogacionista Infantil Núcleo 01</p>
+          </div>
+          <div class="item">
+            <h2>Agora para Conselho Tutelar seu voto será aqui 🗳️</h2>
+          </div>
+          <div class="item">
+            <button>
+              Centro de Ensino Fundamental 5
+            </button>
+          </div>
+        </div>
+
+        <div class="quadro dois">
+          <h3>Guará II</h3>
+          <h2>Quem votou nos locais abaixo 👇🏻</h2>
+          <div class="item">
+
+            <p>Centro Educacional 3</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 06</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 08 (antigo CEF 07)</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Técnica Cepag</p>
+          </div>
+          <div class="item">
+
+            <p>Centro de Ensino Fundamental 08</p>
+          </div>
+          <div class="item">
+
+            <p>Colégio Objetivo</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 07</p>
+          </div>
+          <div class="item">
+
+            <p>Escola Classe 03 (antigo colégio Padre Di Francia)</p>
+          </div>
+          <div class="item">
+
+            <p>Centro de Ensino Fundamental 10</p>
+          </div>
+          <div class="item">
+
+            <p>Colégio Rogacionista</p>
+          </div>
+          <div class="item">
+
+            <p>Faculdade Projeção, próximo ao terminal rodoviário</p>
+          </div>
+          <div class="item">
+            <h2>Agora para Conselho Tutelar seu voto será aqui 🗳️</h2>
+          </div>
+          <div class="item">
+            <button>
+              Centro Educacional 3
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--==================== PERGUNTAS ====================-->
+    <section id="propostas" class="perguntas" name="perguntas">
+      <div class="titulo"> 
+        <h2 data-title="Iagho 20.186 eu vou votar!">Conheçam minhas propostas</h2>
+      </div>
+      <div class="itens">
+        <div class="item">
+          <h3>Fortalecimento</h3>
+          <p>Desenvolver ações para fortalecer a rede de proteção à infância e adolescência, incluindo a capacitação de
+            profissionais de diferentes setores, como saúde, educação, serviço social e segurança, para trabalhar em
+            conjunto com os conselheiros tutelares.</p>
+        </div>
+        <div class="item">
+          <h3>Campanhas</h3>
+          <p>Promover campanhas de conscientização nas escolas e comunidades sobre os direitos das crianças e
+            adolescentes, bem como sobre a importância de denunciar casos de violência, negligência e exploração.</p>
+        </div>
+        <div class="item">
+          <h3>Atendimento Especializado</h3>
+          <p>Garantir que crianças e adolescentes que sofreram violações de direitos tenham acesso a atendimento
+            especializado, incluindo tratamento médico, psicológico e psiquiátrico, quando necessário.</p>
+        </div>
+        <div class="item">
+          <h3>Acompanhamento Escolar</h3>
+          <p>Implementar programas de acompanhamento escolar para garantir a matrícula e a frequência obrigatórias em
+            estabelecimentos de ensino fundamental, conforme previsto no ECA.</p>
+        </div>
+        <div class="item">
+          <h3>Prevenções</h3>
+          <p>Desenvolver programas de prevenção ao uso de álcool e drogas entre crianças e adolescentes, incluindo a
+            inclusão em programas de auxílio, orientação e tratamento a alcoólatras e toxicômanos.</p>
+        </div>
+        <div class="item">
+          <h3>Apoio à Família</h3>
+          <p>Oferecer orientação e apoio às famílias em situações de risco, incluindo o encaminhamento a serviços de
+            proteção, apoio e promoção da família.</p>
+        </div>
+        <div class="item">
+          <h3>Notificação de Infrações</h3>
+          <p>Reforçar a importância de os conselheiros tutelares notificarem o Ministério Público sobre infrações
+            administrativas ou penais contra os direitos da criança ou adolescente.</p>
+        </div>
+        <div class="item">
+          <h3>Colaboração com a Justiça</h3>
+          <p>Estabelecer mecanismos de colaboração eficiente com a autoridade judiciária para garantir o cumprimento das
+            medidas protetivas estabelecidas no ECA.</p>
+        </div>
+        <div class="item">
+          <h3>Capacitação e Atualização</h3>
+          <p>Promover a capacitação contínua dos conselheiros tutelares, garantindo que estejam atualizados sobre as
+            leis e políticas relacionadas à infância e adolescência.</p>
+        </div>
+        <div class="item">
+          <h3>Monitoramento e Avaliação</h3>
+          <p>Implementar sistemas de monitoramento e avaliação para acompanhar o desempenho e a eficácia das ações dos
+            conselheiros tutelares na proteção dos direitos da criança e do adolescente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== CONTACT ====================-->
+    <section class="contact section" id="contact">
+      <h2 class="section__title title-center" data-title="Entrar em contato">Deixem suas dúvidas</h2>
+
+      <div class="contact__container container grid">
+        <div class="contact__details">
+          <div class="contact__item">
+            <i class="fa-solid fa-phone contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Telefone:</h3>
+              <span class="contact__data">(61) 9 ????-????</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <i class="fa-solid fa-envelope contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">E-mail:</h3>
+              <span class="contact__data">iagho20186@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <i class="fa-solid fa-location-dot contact__icon"></i>
+
+            <div>
+              <h3 class="contact__title">Endereço:</h3>
+              <span class="contact__data">Guará, Brasília - Distrito Federal</span>
+            </div>
+          </div>
+        </div>
+
+        <form action="" class="contact__form">
+          <div class="form__group">
+            <div class="form__input">
+              <input type="text" placeholder="Nome" class="input__control" />
+            </div>
+
+            <div class="form__input">
+              <input type="email" placeholder="E-mail" class="input__control">
+            </div>
+          </div>
+
+          <div class="form__input">
+            <input type="text" placeholder="Assunto" class="input__control">
+          </div>
+
+          <div class="form__input">
+            <textarea name="" id="" placeholder="Mensagem" cols="30" rows="10"
+              class="input__control textarea"></textarea>
+          </div>
+
+          <button class="btn contact__btn">Enviar</button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__container box__container">
+      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" class="footer__link">Rafael Moreira</a>.
+        Todos os direitos reservados.</p>
+
+      <div class="footer__social-links">
+        <a href="policy.html" class="link__lgpd">Política e Privacidade</a>
+        <a href="term.html" class="link__lgpd">Termos e Condições</a>
+        <div class="footer__social-link">
+
+          <a href="https://wa.me/556182577964" target="_blank" class="footer__social-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/iaghosousa/" target="_blank" class="footer__social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/iaghosousa" target="_blank" class="footer__social-link">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--================= LETREIRO =====================-->
+  <div class="div__section">
+    <div id="scroller-container">
+      <div class="marquee">
+        🗳️ Vote Iagho 20.186! &nbsp; <i class="fa-brands fa-whatsapp letter"></i> Fale comigo e ajude na campanha.
+        &nbsp;
+        🗳️ Vote Iagho 20.186! &nbsp; <i class="fa-brands fa-whatsapp letter"></i> Fale comigo e ajude na campanha.
+        &nbsp;
+        🗳️ Vote Iagho 20.186! &nbsp; <i class="fa-brands fa-whatsapp letter"></i> Fale comigo e ajude na campanha.
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
