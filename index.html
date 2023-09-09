@@ -49,7 +49,7 @@
   <!-- Tamanho imagem compartilhamento -->
   <meta property="og:locale" content="pt_BR">
   <meta property="og:image:type"
-    content="https://github.com/RafaeltiMoreira/iagho-20.186/blob/main/assets/img/iagho-saiba-mais.jpg">
+    content="https://github.com/RafaeltiMoreira/iagho-20.186/blob/main/assets/img/iagho-saiba-mais.JPG">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
   <meta property="og:type" content="website">
@@ -97,7 +97,7 @@
     </label>
     <label for="style-whats" class="style__switcher-whats-switcher">
       <div class="custom-button-whats-switcher">
-        <a href="https://wa.me/556182577964" target="_blank">
+        <a href="#" target="_blank" id="msgSwitcher">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
@@ -174,7 +174,7 @@
         </div>
 
         <div class="home__img-wrapper">
-          <img src="assets/img/saiba-mais.png" alt="Foto do candidato Iagho" class="home__img">
+          <img src="assets/img/saiba-mais.png" alt="Foto do candidato Iagho 20.186" class="home__img">
         </div>
       </div>
     </section>
@@ -182,7 +182,7 @@
     <section class="about section" id="about">
       <div class="about__container container grid">
         <div class="about__img-wrapper">
-          <img src="assets/img/quemsou.jpg" alt="" class="about__img">
+          <img src="assets/img/quemsou.jpg" alt="Foto do candidato Iagho 20.186" class="about__img">
         </div>
 
         <div class="about__content">
@@ -222,7 +222,7 @@
             <a href="#propostas" class="btn">Propostas</a>
 
             <div class="about__social-links">
-              <a href="https://wa.me/556182577964" target="_blank" class="about__social-link">
+              <a href="#" target="_blank" class="about__social-link" id="msgAbout">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
 
@@ -433,7 +433,7 @@
     </section>
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
-      <h2 class="section__title title-center" data-title="Entrar em contato">Deixem suas dúvidas</h2>
+      <h2 class="section__title title-center" data-title="Entrar em contato">Participem da campanha e enviem suas mensagens</h2>
 
       <div class="contact__container container grid">
         <div class="contact__details">
@@ -468,11 +468,11 @@
         <form action="" class="contact__form">
           <div class="form__group">
             <div class="form__input">
-              <input type="text" placeholder="Nome" class="input__control" />
+              <input type="text" placeholder="Nome" class="input__control" id="name" />
             </div>
 
             <div class="form__input">
-              <input type="email" placeholder="E-mail" class="input__control">
+              <input type="email" placeholder="E-mail" class="input__control" id="email">
             </div>
           </div>
 
@@ -481,11 +481,11 @@
           </div>-->
 
           <div class="form__input">
-            <textarea name="" id="" placeholder="Mensagem" cols="30" rows="10"
+            <textarea name="" id="mensagem" placeholder="Mensagem" cols="30" rows="10"
               class="input__control textarea"></textarea>
           </div>
 
-          <button class="btn contact__btn">Enviar</button>
+          <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank">Enviar</a>
 
         </form>
       </div>
@@ -507,7 +507,7 @@
   <!--==================== FOOTER ====================-->
   <footer class="footer">
     <div class="footer__container box__container">
-      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" class="footer__link">Rafael Moreira</a>.
+      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" id="footerMoreira" class="footer__link" target="_blank">Rafael Moreira</a>.
         Todos os direitos reservados.</p>
 
       <div class="footer__social-links">
@@ -515,7 +515,7 @@
         <a href="term.html" class="link__lgpd">Termos e Condições</a>
         <div class="footer__social-link">
 
-          <a href="https://wa.me/556182577964" target="_blank" class="footer__social-link">
+          <a href="#" target="_blank" class="footer__social-link" id="socialFooter">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
 
