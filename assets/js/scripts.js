@@ -8,3 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/*Cookies*/
+
+let msgLgpd = document.getElementById('lgpd-msg')
+
+function accept() {
+    localStorage.lgpd = 'accepted'
+    msgLgpd.classList.remove('show')
+}
+
+if (localStorage.lgpd == 'accepted') {
+    msgLgpd.classList.remove('show')
+} else {
+    msgLgpd.classList.add('show')
+}
