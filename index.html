@@ -12,6 +12,7 @@
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <title>Iagho Sousa | 20.186</title>
   <meta property="og:title"
@@ -71,6 +72,7 @@
 </head>
 
 <body>
+  <div class="container-mensagens" id="container-mensagens"></div>
   <!--==================== STYLE SWITCHER ====================-->
   <input type="radio" name="color" id="color-1" />
   <input type="radio" name="color" id="color-2" />
@@ -86,7 +88,7 @@
   <input type="checkbox" id="day-night">
   <input type="button" id="style-whats">
 
-  <div class="style__switcher lgpd-accepted"> <!--lgpd-accepted-->
+  <div class="style__switcher lgpd-accepted">
     <label for="toggler" class="style__switcher-toggler">
       <i class="fa-solid fa-gear" title="Configurar cor do site"></i>
     </label>
@@ -97,7 +99,7 @@
     </label>
     <label for="style-whats" class="style__switcher-whats-switcher">
       <div class="custom-button-whats-switcher">
-        <a href="#" target="_blank" id="msgSwitcher">
+        <a href="#" target="_blank" id="msgSwitcher" onclick="whats.metodos.abrirWhatsRight()">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
@@ -222,7 +224,7 @@
             <a href="#propostas" class="btn">Propostas</a>
 
             <div class="about__social-links">
-              <a href="#" target="_blank" class="about__social-link" id="msgAbout">
+              <a href="#" target="_blank" class="about__social-link" id="msgAbout" onclick="whats.metodos.abrirWhatsSocialAbout()">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
 
@@ -477,11 +479,11 @@
         <form action="" class="contact__form">
           <div class="form__group">
             <div class="form__input">
-              <input type="text" placeholder="Nome" class="input__control" id="name" />
+              <input type="text" placeholder="Nome" class="input__control" id="name" required />
             </div>
 
             <div class="form__input">
-              <input type="email" placeholder="E-mail" class="input__control" id="email">
+              <input type="email" placeholder="E-mail" class="input__control" id="email" required>
             </div>
           </div>
 
@@ -490,11 +492,11 @@
           </div>-->
 
           <div class="form__input">
-            <textarea name="" id="mensagem" placeholder="Mensagem" cols="30" rows="10"
-              class="input__control textarea"></textarea>
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="10"
+              class="input__control textarea" required></textarea>
           </div>
 
-          <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank">Enviar</a>
+          <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank" onclick="whats.metodos.validaMsg()">Enviar</a>
 
         </form>
       </div>
@@ -515,7 +517,7 @@
   <!--==================== FOOTER ====================-->
   <footer class="footer">
     <div class="footer__container box__container">
-      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" id="footerMoreira" class="footer__link" target="_blank">Rafael Moreira</a>.
+      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" id="footerMoreira" class="footer__link" target="_blank" onclick="whats.metodos.abrirWhatsSocialFooterLink()">Rafael Moreira</a>.
         Todos os direitos reservados.</p>
 
       <div class="footer__social-links">
@@ -523,7 +525,7 @@
         <a href="term.html" class="link__lgpd">Termos e Condições</a>
         <div class="footer__social-link">
 
-          <a href="#" target="_blank" class="footer__social-link" id="socialFooter">
+          <a href="#" target="_blank" class="footer__social-link" id="socialFooter" onclick="whats.metodos.abrirWhatsSocialFooter()">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
 
@@ -545,6 +547,7 @@
       &nbsp; 🗳️ Vote Iagho 20.186! &nbsp; 🗳️ Vote Iagho 20.186!
     </div>
   </div>
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
+AOS.init();
 
-    hamburgerMenu.addEventListener('click', function () {
-        mobileMenu.classList.toggle('active'); // Alterna a classe .active no menu móvel
-        hamburgerMenu.classList.toggle('active'); // Alterna a classe .active no botão do hamburguer
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  hamburgerMenu.addEventListener('click', function () {
+    mobileMenu.classList.toggle('active'); // Alterna a classe .active no menu móvel
+    hamburgerMenu.classList.toggle('active'); // Alterna a classe .active no botão do hamburguer
+  });
 });
 
 /*Cookies*/
@@ -13,153 +15,193 @@ document.addEventListener('DOMContentLoaded', function () {
 let msgLgpd = document.getElementById('lgpd-msg')
 
 function accept() {
-    localStorage.lgpd = 'accepted'
-    msgLgpd.classList.remove('show')
-    
-    document.querySelector('.style__switcher').classList.add('lgpd-accepted');
+  localStorage.lgpd = 'accepted'
+  msgLgpd.classList.remove('show')
+
+  document.querySelector('.style__switcher').classList.add('lgpd-accepted');
 }
 
 if (localStorage.lgpd == 'accepted') {
-    msgLgpd.classList.remove('show')
+  msgLgpd.classList.remove('show')
 } else {
-    msgLgpd.classList.add('show')
+  msgLgpd.classList.add('show')
 }
+
+/* CONTATOS */
+
+var CELULAR_IAGHO = '556182577964';
+var CELULAR_RAFAEL = '556192239354';
 
 /* Iagho 20.186 - Form */
 
-document.getElementById("btnEnviarMsg").addEventListener("click", enviarMensagem);
+const whats = {
+  metodos: {
+    enviarMensagem: () => {
+      // Evento ao botão de envio
+      document.getElementById("btnEnviarMsg").addEventListener("click", () => {
+        // Valores dos campos
+        const nome = encodeURIComponent(document.getElementById("name").value);
+        const email = encodeURIComponent(document.getElementById("email").value);
+        const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
 
-function enviarMensagem() {
-  const nome = encodeURIComponent(document.getElementById("name").value);
-  const email = encodeURIComponent(document.getElementById("email").value);
-  const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
+        const mensagemWhatsApp = `Olá, me chamo *${nome}*. Meu e-mail: ${email}. Mensagem: ${mensagem}`;
+        const encode = encodeURIComponent(mensagemWhatsApp);
 
-  const mensagemWhatsApp = `Olá%20,%20me%20chamo%20${nome}.%20Meu%20e-mail%20é%20${email}.%20Mensagem:%20${mensagem}`;
+        const urlCampanha = `https://wa.me/${CELULAR_IAGHO}?text=${encode}`;
 
-  const numeroCampanha = '556182577964';
-  const encode = encodeURI(mensagemWhatsApp);
+        document.getElementById("btnEnviarMsg").href = urlCampanha;
 
-  const urlCampanha = `https://wa.me/${numeroCampanha}?text=${encode}`;
+        whats.metodos.validaMsg();
+      });
+    },
 
-  document.getElementById("btnEnviarMsg").href = urlCampanha;
+    validaMsg: () => {
+      // Obtenha os valores dos campos
+      let name = $("#name").val().trim();
+      let email = $("#email").val().trim();
+      let mensagem = $("#mensagem").val().trim();
+
+      // Valide os campos
+      if (name.length <= 0) {
+        whats.metodos.mensagemModal('Por favor, informe seu Nome.');
+        $("#name").focus();
+        return;
+      }
+
+      if (email.length <= 0) {
+        whats.metodos.mensagemModal('Por favor, informe seu E-mail.');
+        $("#email").focus();
+        return;
+      }
+
+      if (mensagem.length <= 0) {
+        whats.metodos.mensagemModal('Por favor, digite sua mensagem.');
+        $("#mensagem").focus();
+        return;
+      }
+
+      
+    },
+
+    mensagemModal: (mensagemWhatsApp, cor = 'red', tempo = 3500) => {
+      // Crie uma mensagem de feedback
+      let id = Math.floor(Date.now() * Math.random()).toString();
+      let msg = `<div id="msg-${id}" data-aos="zoom-out zoom-in-left" class="toast ${cor}">${mensagemWhatsApp}</div>`;
+
+      // Adicione a mensagem à página
+      $("#container-mensagens").append(msg);
+
+      // Remova a mensagem após um certo tempo
+      setTimeout(() => {
+        $("#msg-" + id).removeClass('zoom-in-left');
+        $("#msg-" + id).addClass('zoom-out');
+        setTimeout(() => {
+          $("#msg-" + id).remove();
+        }, 800);
+      }, tempo);
+    },
+
+    abrirWhatsRight: () => {
+
+      var texto = 'Olá! gostaria de ajudar na campanha.';
+
+      let encode = encodeURIComponent(texto);
+      let URL = `https://wa.me/${CELULAR_IAGHO}?text=${encode}`;
+
+      $("#msgSwitcher").attr('href', URL);
+
+    },
+
+    abrirWhatsSocialAbout: () => {
+
+      var textoAbout = 'Olá! gostaria de ajudar na campanha.';
+
+      let encodeAbout = encodeURIComponent(textoAbout);
+      let URLAbout = `https://wa.me/${CELULAR_IAGHO}?text=${encodeAbout}`;
+
+      $("#msgAbout").attr('href', URLAbout);
+
+    },
+
+    abrirWhatsSocialFooter: () => {
+
+      var textoFooter = 'Olá! gostaria de ajudar na campanha.';
+
+      let encodeFooter = encodeURIComponent(textoFooter);
+      let URLFooter = `https://wa.me/${CELULAR_IAGHO}?text=${encodeFooter}`;
+
+      $("#socialFooter").attr('href', URLFooter);
+
+    },
+
+    abrirWhatsSocialFooterLink: () => {
+
+      var textoFooterPolicy = 'Olá! gostaria de conversar sobre o desenvolvimento de site.';
+
+      let encodeFooterPolicy = encodeURIComponent(textoFooterPolicy);
+      let URLPolicy = `https://wa.me/${CELULAR_RAFAEL}?text=${encodeFooterPolicy}`;
+
+      $("#footerMoreira").attr('href', URLPolicy);
+
+    },
+  }
+};
+
+whats.metodos.enviarMensagem();
+
+/* Footer Policy */
+
+document.getElementById("socialFooterPolicy").addEventListener("click", enviarMensagemWhats);
+
+function enviarMensagemWhats() {
+  const mensagemWhatsAppPolicy = 'Olá! gostaria de ajudar na campanha.';
+
+  const numeroCampanhaFooterPolicy = '556182577964';
+  const encodePolicy = encodeURIComponent(mensagemWhatsAppPolicy);
+
+  const urlPolicy = `https://wa.me/${numeroCampanhaFooterPolicy}?text=${encodePolicy}`;
+
+  document.getElementById("socialFooterPolicy").href = urlPolicy;
 }
 
-/* Iagho 20.186 - Footer */ 
+document.getElementById("rafaPolicy").addEventListener("click", enviarMensagemRafa);
 
-document.getElementById("socialFooter").addEventListener("click", enviarMensagemFooter);
+function enviarMensagemRafa() {
+  const mensagemWhatsAppPolicy = 'Olá! gostaria de conversar sobre o desenvolvimento de site.';
 
-function enviarMensagemFooter() {
-  const mensagemWhatsAppFooter = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
+  const numeroCampanhaRafaPolicy = '556192239354';
+  const encodeRafaPolicy = encodeURIComponent(mensagemWhatsAppPolicy);
 
-  const numeroCampanhaFooter = '556182577964';
-  const encode = encodeURI(mensagemWhatsAppFooter);
+  const urlRafaPolicy = `https://wa.me/${numeroCampanhaRafaPolicy}?text=${encodeRafaPolicy}`;
 
-  const urlCampanhaFooter = `https://wa.me/${numeroCampanhaFooter}?text=${encode}`;
-
-  document.getElementById("socialFooter").href = urlCampanhaFooter;
+  document.getElementById("rafaPolicy").href = urlRafaPolicy;
 }
 
-/* Iagho 20.186 - Footer P */
+/* Footer Termos */
 
-document.getElementById("socialFooterPrivate").addEventListener("click", enviarMensagemFooterP);
+document.getElementById("socialFooterTerm").addEventListener("click", enviarMensagemWhatsTerm);
 
-function enviarMensagemFooterP() {
-  const mensagemWhatsAppFooterP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
+function enviarMensagemWhatsTerm() {
+  const mensagemWhatsTerm = 'Olá! gostaria de ajudar na campanha.';
 
-  const numeroCampanhaFooterP = '556182577964';
-  const encode = encodeURI(mensagemWhatsAppFooterP);
+  const numeroCampanhaFooterTerm = '556182577964';
+  const encodeTerm = encodeURIComponent(mensagemWhatsTerm);
 
-  const urlCampanhaFooterP = `https://wa.me/${numeroCampanhaFooterP}?text=${encode}`;
+  const urlTerm = `https://wa.me/${numeroCampanhaFooterTerm}?text=${encodeTerm}`;
 
-  document.getElementById("socialFooterPrivate").href = urlCampanhaFooterP;
+  document.getElementById("socialFooterTerm").href = urlTerm;
 }
 
-/* Iagho 20.186 - Footer LinkP */ 
+document.getElementById("rafaTerm").addEventListener("click", enviarMensagemTerm);
 
-document.getElementById("socialFooterLink").addEventListener("click", enviarMensagemFooterLink);
+function enviarMensagemTerm() {
+  const mensagemAppTerm = 'Olá! gostaria de conversar sobre o desenvolvimento de site.';
 
-function enviarMensagemFooterLink() {
-  const mensagemWhatsAppFooterLink = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
+  const numeroCampanhaRafaTerm = '556192239354';
+  const encodeRafaTerm = encodeURIComponent(mensagemAppTerm);
 
-  const numeroCampanhaFooterLink = '556182577964';
-  const encode = encodeURI(mensagemWhatsAppFooterLink);
+  const urlRafaTerm = `https://wa.me/${numeroCampanhaRafaTerm}?text=${encodeRafaTerm}`;
 
-  const urlCampanhaFooterLink = `https://wa.me/${numeroCampanhaFooterLink}?text=${encode}`;
-
-  document.getElementById("socialFooterLink").href = urlCampanhaFooterLink;
+  document.getElementById("rafaTerm").href = urlRafaTerm;
 }
 
-/* Rafael Moreira - Footer PP */ 
-
-document.getElementById("LinkPrivate").addEventListener("click", enviarMensagemLinkP);
-
-function enviarMensagemLinkP() {
-  const mensagemWhatsAppLinkP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
-
-  const numeroCampanhaLinkP = '556192239354';
-  const encode = encodeURI(mensagemWhatsAppLinkP);
-
-  const urlCampanhaLinkP = `https://wa.me/${numeroCampanhaLinkP}?text=${encode}`;
-
-  document.getElementById("LinkPrivate").href = urlCampanhaLinkP;
-}
-
-/* Rafael Moreira - Footer IdP */ 
-
-document.getElementById("IdFooterP").addEventListener("click", enviarMensagemIdP);
-
-function enviarMensagemIdP() {
-  const mensagemWhatsAppIdP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
-
-  const numeroCampanhaIdP = '556192239354';
-  const encode = encodeURI(mensagemWhatsAppIdP);
-
-  const urlCampanhaIdP = `https://wa.me/${numeroCampanhaIdP}?text=${encode}`;
-
-  document.getElementById("IdFooterP").href = urlCampanhaIdP;
-}
-
-/* Iagho 20.186 - About */ 
-
-document.getElementById("msgAbout").addEventListener("click", enviarMensagemAbout);
-
-function enviarMensagemAbout() {
-  const mensagemWhatsAppAbout = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
-
-  const numeroCampanhaAbout = '556182577964';
-  const encode = encodeURI(mensagemWhatsAppAbout);
-
-  const urlCampanhaAbout = `https://wa.me/${numeroCampanhaAbout}?text=${encode}`;
-
-  document.getElementById("msgAbout").href = urlCampanhaAbout;
-}
-
-/* Iagho 20.186 - Switcher */ 
-
-document.getElementById("msgSwitcher").addEventListener("click", enviarMensagemSwitcher);
-
-function enviarMensagemSwitcher() {
-  const mensagemWhatsAppSwitcher = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
-
-  const numeroCampanhaSwitcher = '556182577964';
-  const encode = encodeURI(mensagemWhatsAppSwitcher);
-
-  const urlCampanhaSwitcher = `https://wa.me/${numeroCampanhaSwitcher}?text=${encode}`;
-
-  document.getElementById("msgSwitcher").href = urlCampanhaSwitcher;
-}
-
-/* Rafael Moreira - Footer */ 
-
-document.getElementById("footerMoreira").addEventListener("click", enviarMensagemMoreira);
-
-function enviarMensagemMoreira() {
-  const mensagemWhatsAppMoreira = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
-
-  const numeroCampanhaMoreira = '556192239354';
-  const encode = encodeURI(mensagemWhatsAppMoreira);
-
-  const urlCampanhaMoreira = `https://wa.me/${numeroCampanhaMoreira}?text=${encode}`;
-
-  document.getElementById("footerMoreira").href = urlCampanhaMoreira;
-}
