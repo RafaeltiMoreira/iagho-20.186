@@ -15,6 +15,8 @@ let msgLgpd = document.getElementById('lgpd-msg')
 function accept() {
     localStorage.lgpd = 'accepted'
     msgLgpd.classList.remove('show')
+    
+    document.querySelector('.style__switcher').classList.add('lgpd-accepted');
 }
 
 if (localStorage.lgpd == 'accepted') {
@@ -32,7 +34,7 @@ function enviarMensagem() {
   const email = encodeURIComponent(document.getElementById("email").value);
   const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
 
-  const mensagemWhatsApp = `Olá, me chamo ${nome}. Meu e-mail é ${email}. Mensagem: ${mensagem}`;
+  const mensagemWhatsApp = `Olá%20,%20me%20chamo%20${nome}.%20Meu%20e-mail%20é%20${email}.%20Mensagem:%20${mensagem}`;
 
   const numeroCampanha = '556182577964';
   const encode = encodeURI(mensagemWhatsApp);
@@ -47,7 +49,7 @@ function enviarMensagem() {
 document.getElementById("socialFooter").addEventListener("click", enviarMensagemFooter);
 
 function enviarMensagemFooter() {
-  const mensagemWhatsAppFooter = 'Olá, gostaria de conversar sobre a campanha.';
+  const mensagemWhatsAppFooter = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
 
   const numeroCampanhaFooter = '556182577964';
   const encode = encodeURI(mensagemWhatsAppFooter);
@@ -62,7 +64,7 @@ function enviarMensagemFooter() {
 document.getElementById("socialFooterPrivate").addEventListener("click", enviarMensagemFooterP);
 
 function enviarMensagemFooterP() {
-  const mensagemWhatsAppFooterP = 'Olá, gostaria de conversar sobre a campanha.';
+  const mensagemWhatsAppFooterP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
 
   const numeroCampanhaFooterP = '556182577964';
   const encode = encodeURI(mensagemWhatsAppFooterP);
@@ -77,7 +79,7 @@ function enviarMensagemFooterP() {
 document.getElementById("socialFooterLink").addEventListener("click", enviarMensagemFooterLink);
 
 function enviarMensagemFooterLink() {
-  const mensagemWhatsAppFooterLink = 'Olá, gostaria de conversar sobre a campanha.';
+  const mensagemWhatsAppFooterLink = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
 
   const numeroCampanhaFooterLink = '556182577964';
   const encode = encodeURI(mensagemWhatsAppFooterLink);
@@ -92,7 +94,7 @@ function enviarMensagemFooterLink() {
 document.getElementById("LinkPrivate").addEventListener("click", enviarMensagemLinkP);
 
 function enviarMensagemLinkP() {
-  const mensagemWhatsAppLinkP = 'Olá, gostaria de conversar sobre um desenvolvimento de site.';
+  const mensagemWhatsAppLinkP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
 
   const numeroCampanhaLinkP = '556192239354';
   const encode = encodeURI(mensagemWhatsAppLinkP);
@@ -107,7 +109,7 @@ function enviarMensagemLinkP() {
 document.getElementById("IdFooterP").addEventListener("click", enviarMensagemIdP);
 
 function enviarMensagemIdP() {
-  const mensagemWhatsAppIdP = 'Olá, gostaria de conversar sobre um desenvolvimento de site.';
+  const mensagemWhatsAppIdP = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
 
   const numeroCampanhaIdP = '556192239354';
   const encode = encodeURI(mensagemWhatsAppIdP);
@@ -122,7 +124,7 @@ function enviarMensagemIdP() {
 document.getElementById("msgAbout").addEventListener("click", enviarMensagemAbout);
 
 function enviarMensagemAbout() {
-  const mensagemWhatsAppAbout = 'Olá, gostaria de conversar sobre a campanha.';
+  const mensagemWhatsAppAbout = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
 
   const numeroCampanhaAbout = '556182577964';
   const encode = encodeURI(mensagemWhatsAppAbout);
@@ -137,7 +139,7 @@ function enviarMensagemAbout() {
 document.getElementById("msgSwitcher").addEventListener("click", enviarMensagemSwitcher);
 
 function enviarMensagemSwitcher() {
-  const mensagemWhatsAppSwitcher = 'Olá, gostaria de conversar sobre a campanha.';
+  const mensagemWhatsAppSwitcher = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+campanha.';
 
   const numeroCampanhaSwitcher = '556182577964';
   const encode = encodeURI(mensagemWhatsAppSwitcher);
@@ -152,7 +154,7 @@ function enviarMensagemSwitcher() {
 document.getElementById("footerMoreira").addEventListener("click", enviarMensagemMoreira);
 
 function enviarMensagemMoreira() {
-  const mensagemWhatsAppMoreira = 'Olá, gostaria de conversar sobre um desenvolvimento de site.';
+  const mensagemWhatsAppMoreira = '?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+um+desenvolvimento+de+site.';
 
   const numeroCampanhaMoreira = '556192239354';
   const encode = encodeURI(mensagemWhatsAppMoreira);
