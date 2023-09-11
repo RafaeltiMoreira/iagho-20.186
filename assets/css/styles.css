@@ -18,6 +18,7 @@
   --color-whats: #FFF;
   --bg-whats-green: #14b077;
   --white: #FFF;
+  --red: #ec1838;
 
   /*========== Fontes ==========*/
 
@@ -32,6 +33,7 @@
   --larger-font-size: 1.25rem;
   --large-font-size: 1.125rem;
   --medium-font-size: 1rem;
+  --error-font-size: 0.875rem;
   --sm-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
@@ -1219,8 +1221,15 @@ section.perguntas .itens .item p span {
 .container-mensagens {
   position: fixed;
   right: 20px;
-  top: 20px;
+  top: 10px;
   z-index: 9999;
+}
+
+.erro-mensagem {
+  color: var(--red);
+  font-size: var(--error-font-size);
+  padding: 0 10px 20px;
+  margin-top: -1.15rem;
 }
 
 /*=============== BREAKPOINTS ===============*/

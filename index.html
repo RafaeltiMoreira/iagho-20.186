@@ -72,7 +72,6 @@
 </head>
 
 <body>
-  <div class="container-mensagens" id="container-mensagens"></div>
   <!--==================== STYLE SWITCHER ====================-->
   <input type="radio" name="color" id="color-1" />
   <input type="radio" name="color" id="color-2" />
@@ -476,14 +475,17 @@
           </div>
         </div>
 
+        <div class="container-mensagens" id="container-mensagens"></div>
         <form action="" class="contact__form">
           <div class="form__group">
             <div class="form__input">
               <input type="text" placeholder="Nome" class="input__control" id="name" required />
+              <div class="erro-mensagem" id="erroNome"></div>
             </div>
 
             <div class="form__input">
               <input type="email" placeholder="E-mail" class="input__control" id="email" required>
+              <div class="erro-mensagem" id="erroEmail"></div>
             </div>
           </div>
 
@@ -494,18 +496,20 @@
           <div class="form__input">
             <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="10"
               class="input__control textarea" required></textarea>
+              <div class="erro-mensagem" id="erroMensagem"></div>
           </div>
+          <!--<div id="erroMensagem" class="erro-mensagem"></div>-->
 
           <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank" onclick="whats.metodos.validaMsg()">Enviar</a>
-
         </form>
+
       </div>
     </section>
   </main>
   <!-- =============== LGPD ================== -->
   <div class="lgpd-msg" id="lgpd-msg">
     <div class="lgpd-txt">
-      <p>Em nosso site não usamos cookies, ao clicar em Concordar e fechar, entendemos que está de acordo com a nossa 'Política de Privacidade' ou 'Termos e Condições' e declara estar ciente com os termos e diretrizes.</p>
+      <p>Em nosso site não usamos cookies, ao clicar em "Concordar e fechar", entendemos que está de acordo com a nossa 'Política de Privacidade' ou 'Termos e Condições' e declara estar ciente com os termos e diretrizes.</p>
 
       <div class="lgpd-btn">
         <a href="policy.html" target="_blank" class="lgpdP">Política de Privacidade</a>

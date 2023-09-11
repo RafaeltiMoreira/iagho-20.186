@@ -1,5 +1,3 @@
-AOS.init();
-
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -7,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   hamburgerMenu.addEventListener('click', function () {
     mobileMenu.classList.toggle('active'); // Alterna a classe .active no menu móvel
     hamburgerMenu.classList.toggle('active'); // Alterna a classe .active no botão do hamburguer
+  });
+
+  const linksMobileMenu = document.querySelectorAll('.nav__link');
+  linksMobileMenu.forEach((link) => {
+    link.addEventListener('click', () => {
+      // Remova a classe .active do menu mobile para fechar
+      mobileMenu.classList.remove('active');
+      hamburgerMenu.classList.remove('active'); // Botão hamburger também seja desativado
+    });
   });
 });
 
@@ -37,68 +44,89 @@ var CELULAR_RAFAEL = '556192239354';
 const whats = {
   metodos: {
     enviarMensagem: () => {
-      // Evento ao botão de envio
-      document.getElementById("btnEnviarMsg").addEventListener("click", () => {
-        // Valores dos campos
-        const nome = encodeURIComponent(document.getElementById("name").value);
-        const email = encodeURIComponent(document.getElementById("email").value);
-        const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
+
+      const btnEnviar = document.getElementById("btnEnviarMsg");
+
+      btnEnviar.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const nome = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
 
         const mensagemWhatsApp = `Olá, me chamo *${nome}*. Meu e-mail: ${email}. Mensagem: ${mensagem}`;
-        const encode = encodeURIComponent(mensagemWhatsApp);
+        const encode = encodeURIComponent(mensagemWhatsApp).replace(/%20/g, ' ');
 
         const urlCampanha = `https://wa.me/${CELULAR_IAGHO}?text=${encode}`;
 
-        document.getElementById("btnEnviarMsg").href = urlCampanha;
+        document.getElementById("erroNome").textContent = '';
+        document.getElementById("erroEmail").textContent = '';
+        document.getElementById("erroMensagem").textContent = '';
 
-        whats.metodos.validaMsg();
+        btnEnviar.textContent = "Enviando...";
+        btnEnviar.disabled = true;
+
+        const validacaoOk = await whats.metodos.validaMsg();
+
+        if (validacaoOk) {
+
+          window.open(urlCampanha, "_blank");
+
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("mensagem").value = "";
+          btnEnviar.textContent = "Enviar";
+          btnEnviar.disabled = false;
+        } else {
+          btnEnviar.textContent = "Enviar";
+          btnEnviar.disabled = false;
+        }
+      });
+
+      document.getElementById("name").addEventListener("input", () => {
+        document.getElementById("erroNome").textContent = '';
+      });
+    
+      document.getElementById("email").addEventListener("input", () => {
+        document.getElementById("erroEmail").textContent = '';
+      });
+    
+      document.getElementById("mensagem").addEventListener("input", () => {
+        document.getElementById("erroMensagem").textContent = '';
       });
     },
 
-    validaMsg: () => {
+    validaMsg: async () => {
       // Obtenha os valores dos campos
-      let name = $("#name").val().trim();
-      let email = $("#email").val().trim();
-      let mensagem = $("#mensagem").val().trim();
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let mensagem = document.getElementById("mensagem").value.trim();
 
-      // Valide os campos
+      document.getElementById("erroNome").textContent = '';
+      document.getElementById("erroEmail").textContent = '';
+      document.getElementById("erroMensagem").textContent = '';
+
+      let validacaoOk = true;
+
       if (name.length <= 0) {
-        whats.metodos.mensagemModal('Por favor, informe seu Nome.');
-        $("#name").focus();
-        return;
+        document.getElementById("erroNome").textContent = 'Por favor, informe seu nome.';
+        document.getElementById("name").focus();
+        validacaoOk = false;
       }
 
       if (email.length <= 0) {
-        whats.metodos.mensagemModal('Por favor, informe seu E-mail.');
-        $("#email").focus();
-        return;
+        document.getElementById("erroEmail").textContent = 'Por favor, informe seu e-mail.';
+        document.getElementById("email").focus();
+        validacaoOk = false;
       }
 
       if (mensagem.length <= 0) {
-        whats.metodos.mensagemModal('Por favor, digite sua mensagem.');
-        $("#mensagem").focus();
-        return;
+        document.getElementById("erroMensagem").textContent = 'Por favor, digite sua mensagem.';
+        document.getElementById("mensagem").focus();
+        validacaoOk = false;
       }
 
-      
-    },
-
-    mensagemModal: (mensagemWhatsApp, cor = 'red', tempo = 3500) => {
-      // Crie uma mensagem de feedback
-      let id = Math.floor(Date.now() * Math.random()).toString();
-      let msg = `<div id="msg-${id}" data-aos="zoom-out zoom-in-left" class="toast ${cor}">${mensagemWhatsApp}</div>`;
-
-      // Adicione a mensagem à página
-      $("#container-mensagens").append(msg);
-
-      // Remova a mensagem após um certo tempo
-      setTimeout(() => {
-        $("#msg-" + id).removeClass('zoom-in-left');
-        $("#msg-" + id).addClass('zoom-out');
-        setTimeout(() => {
-          $("#msg-" + id).remove();
-        }, 800);
-      }, tempo);
+      return validacaoOk;
     },
 
     abrirWhatsRight: () => {
