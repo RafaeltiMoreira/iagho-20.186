@@ -19,7 +19,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://iagho20186.com.br">
   <meta property="og:site_name" content="Iagho20186">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="summary_large_image">
   <meta name="twitter:site" content="@iagho20186">
 
   <!--=============== FONT AWESOME ===============-->
@@ -27,6 +27,7 @@
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <title>Iagho Sousa | 20.186</title>
@@ -171,8 +172,8 @@
       <div class="home__container container grid">
         <div class="home__content">
           <span class="home__small">Conselheiro Tutelar</span>
-          <h1 class="home__title">Iagho Sousa<br />
-            <a href="#" class="btn-num">20.186</a>
+          <h1 class="home__title" data-aos="fade-right">Iagho Sousa<br />
+            <a href="#" class="btn-num" data-aos="fade-right" data-aos-delay="500">20.186</a>
           </h1>
 
           <p class="home__description">
@@ -186,7 +187,7 @@
           </div>
         </div>
 
-        <div class="home__img-wrapper">
+        <div class="home__img-wrapper" data-aos="zoom-in-up">
           <img src="assets/img/saiba-mais.png" alt="Foto do candidato Iagho 20.186" class="home__img">
         </div>
       </div>
@@ -236,15 +237,15 @@
 
             <div class="about__social-links">
               <a href="#" target="_blank" class="about__social-link" id="msgAbout"
-                onclick="whats.metodos.abrirWhatsSocialAbout()">
+                onclick="whats.metodos.abrirWhatsSocialAbout()" data-aos="zoom-in-right" data-aos-delay="100">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
 
-              <a href="https://www.instagram.com/iaghosousa/" target="_blank" class="about__social-link">
+              <a href="https://www.instagram.com/iaghosousa/" target="_blank" class="about__social-link" data-aos="zoom-in-right" data-aos-delay="150">
                 <i class="fa-brands fa-instagram"></i>
               </a>
 
-              <a href="https://www.facebook.com/iaghosousa" target="_blank" class="about__social-link">
+              <a href="https://www.facebook.com/iaghosousa" target="_blank" class="about__social-link" data-aos="zoom-in-right" data-aos-delay="200">
                 <i class="fa-brands fa-square-facebook"></i>
               </a>
             </div>
@@ -255,7 +256,7 @@
     <!--==================== PERGUNTAS ====================-->
     <section id="propostas" class="perguntas" name="perguntas">
       <div class="titulo">
-        <h2 data-title="Iagho 20.186 eu vou votar!">Conheçam minhas propostas</h2>
+        <h2 data-title="Iagho 20.186 eu vou votar!" data-aos="zoom-in" data-aos-delay="200">Conheçam minhas propostas</h2>
       </div>
       <div class="itens">
         <div class="item">
@@ -313,7 +314,7 @@
     </section>
     <!--==================== SERVICES ====================-->
     <section class="services section" id="votacao">
-      <h2 class="section__title title-center" data-title="Iagho 20.186 eu vou votar!">Tudo sobre o dia de votação</h2>
+      <h2 class="section__title title-center" data-title="Iagho 20.186 eu vou votar!" data-aos="zoom-in" data-aos-delay="200">Tudo sobre o dia de votação</h2>
 
       <div class="services__container container grid">
         <div class="services__item">
@@ -469,7 +470,7 @@
     </section>
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
-      <h2 class="section__title title-center" data-title="Contato">Envie a sua mensagem e colabore para a nossa campanha!🫱🏼‍🫲🏼</h2>
+      <h2 class="section__title title-center" data-title="Contato" data-aos="zoom-in" data-aos-delay="200">Envie a sua mensagem e colabore para a nossa campanha!🫱🏼‍🫲🏼</h2>
 
       <div class="contact__container container grid">
         <div class="contact__details">
@@ -582,6 +583,7 @@
     </div>
   </div>
   <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script>AOS.init();</script>
   <script src="assets/js/scripts.js"></script>
 </body>
 
