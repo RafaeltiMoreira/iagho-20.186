@@ -1236,7 +1236,46 @@ section.perguntas .itens .item p span {
 /* For large devices */
 @media screen and (max-width: 1200px) {}
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+  .txt-modal {
+    font-size: var(--medium-font-size);
+  }
+
+  .lgpd-msg {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    bottom: 0;
+  }
+
+  .lgpd-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .lgpd-btn {
+    margin-left: 0;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .lgpd-msg.show {
+    display: flex;
+    align-items: center;
+    left: 50%;
+  }
+
+  .accepted,
+  .lgpdP,
+  .lgpdT {
+    font-size: var(--medium-font-size);
+    padding: 5px 15px;
+  }
+}
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
@@ -1421,45 +1460,11 @@ section.perguntas .itens .item p span {
 
   .contact__btn {
     float: none;
-    /*margin-top: 1rem;*/
   }
 
   /* Cookies */
 
-  .lgpd-msg {
-    width: 100%;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    bottom: 0;
-  }
-
-  .lgpd-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .lgpd-btn {
-    margin-left: 0;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  .lgpd-msg.show {
-    display: flex;
-    align-items: center;
-    left: 50%;
-  }
-
-  .accepted,
-  .lgpdP,
-  .lgpdT {
-    font-size: var(--medium-font-size);
-    padding: 5px 15px;
-  }
+  
 
   /*FOOTER*/
 
@@ -1566,18 +1571,12 @@ section.perguntas .itens .item p span {
     padding: 0;
   }
 
-  /*.title-center {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }*/
-
   .div__section {
     font-size: var(--larger-font-size);
   }
 
 }
 
-/* For small devices */
 @media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 450px) {}

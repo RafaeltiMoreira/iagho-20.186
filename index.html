@@ -7,6 +7,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Tamanho imagem compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Iagho 20.186 - Conselho Tutelar">
+  <meta property="og:description"
+    content="Minha missão como candidato é de apoio, orientação, promoção social da família, dedicação para proteger e garantir os direitos das nossas crianças e adolescentes.">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/RafaeltiMoreira/iagho-20.186/main/assets/img/compartilhar-iagho-20186.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://iagho20186.com.br">
+  <meta property="og:site_name" content="Iagho20186">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@iagho20186">
+
   <!--=============== FONT AWESOME ===============-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
@@ -48,13 +63,10 @@
   <meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
 
   <!-- Tamanho imagem compartilhamento -->
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:image:type"
+  
+  <!--<meta property="og:image:type"
     content="https://github.com/RafaeltiMoreira/iagho-20.186/blob/main/assets/img/iagho-saiba-mais.JPG">
-  <meta property="og:image:width" content="1920">
-  <meta property="og:image:height" content="1080">
-  <meta property="og:type" content="website">
-  <meta property="og:card" content="summary_large_image">
+  <meta property="og:card" content="summary_large_image">-->
 
   <!-- Imagem de compartilhamento -->
   <meta name="image" content="./assets/favicons/favicon-194x194.png">
@@ -223,7 +235,8 @@
             <a href="#propostas" class="btn">Propostas</a>
 
             <div class="about__social-links">
-              <a href="#" target="_blank" class="about__social-link" id="msgAbout" onclick="whats.metodos.abrirWhatsSocialAbout()">
+              <a href="#" target="_blank" class="about__social-link" id="msgAbout"
+                onclick="whats.metodos.abrirWhatsSocialAbout()">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
 
@@ -418,12 +431,14 @@
         </div>
 
         <div class="services__item">
+          <h3 class="btn-services">SEJUS</h3>
           <h3 class="services__title">Buscar locais de votação pelo Título de Eleitor:</h3>
           <p class="services__description">Eleições para Conselheiros Tutelares - 2023</p>
           <a href="https://eleicao.sejus.df.gov.br/?consulta=true" target="_blank" class="btn-a">Acessar</a>
         </div>
 
         <div class="services__item">
+          <h3 class="btn-services">Agência Brasília</h3>
           <h3 class="services__title">Lista de todos os locais de votação:</h3>
           <p class="services__description">Conforme publicação no Diário Oficial do Distrito Federal Nº 167, página 98,
             sexta-feira, 01 de setembro de 2023.</p>
@@ -432,10 +447,21 @@
         </div>
 
         <div class="services__item">
+          <h3 class="btn-services">SEJUS</h3>
           <h3 class="services__title">Quais são os documentos necessários para a votação do dia 01 de outubro:</h3>
-          <p class="services__description">De acordo com a Cartilha Campanha Eleitoral e Regras de Votação, páginas 17 e 18. O eleitor deverá apresentar, no ato da votação, documento de identidade original com foto ou o aplicativo 'e- titulo', disponibilizado pela Justiça Eleitoral. Porém, para votar o eleitor só precisa de um documento oficial com foto, desde que esteja na relação expressa no Edital 13, de 29 de agosto de 2023.</p>
-          <p class="services__description">Serão considerados documentos de identidade: carteiras expedidas pelos Comandos Militares, pelas Secretarias de Segurança Pública, pelos Institutos de Identificação e pelos Corpos de Bombeiros Militares; carteiras expedidas pelos órgãos fiscalizadores de exercício profissional (ordens conselhos etc.); passaporte brasileiro válido; certificado de reservista; carteiras funcionais do Ministério Público; carteiras funcionais expedidas por órgão público que, por lei federal, valham como identidade; carteira de trabalho; carteira nacional de habilitação (somente modelo com foto).</p> 
-          <p class="services__description">Não serão aceitos como documentos de identidade: certidões de nascimento, CPF, carteiras de motorista (modelo sem foto), carteiras de estudante, carteiras funcionais sem valor de identidade, nem documentos ilegíveis, não-identificáveis e/ou danificados.</p>
+          <p class="services__description">De acordo com a Cartilha Campanha Eleitoral e Regras de Votação, páginas 17 e
+            18. O eleitor deverá apresentar, no ato da votação, documento de identidade original com foto ou o
+            aplicativo 'e- titulo', disponibilizado pela Justiça Eleitoral. Porém, para votar o eleitor só precisa de um
+            documento oficial com foto, desde que esteja na relação expressa no Edital 13, de 29 de agosto de 2023.</p>
+          <p class="services__description">Serão considerados documentos de identidade: carteiras expedidas pelos
+            Comandos Militares, pelas Secretarias de Segurança Pública, pelos Institutos de Identificação e pelos Corpos
+            de Bombeiros Militares; carteiras expedidas pelos órgãos fiscalizadores de exercício profissional (ordens
+            conselhos etc.); passaporte brasileiro válido; certificado de reservista; carteiras funcionais do Ministério
+            Público; carteiras funcionais expedidas por órgão público que, por lei federal, valham como identidade;
+            carteira de trabalho; carteira nacional de habilitação (somente modelo com foto).</p>
+          <p class="services__description">Não serão aceitos como documentos de identidade: certidões de nascimento,
+            CPF, carteiras de motorista (modelo sem foto), carteiras de estudante, carteiras funcionais sem valor de
+            identidade, nem documentos ilegíveis, não-identificáveis e/ou danificados.</p>
           <a href="https://conselhotutelar.sejus.df.gov.br/wp-conteudo//uploads/2023/08/cartilha-5.pdf" target="_blank"
             class="btn-a">Acessar</a>
         </div>
@@ -443,7 +469,7 @@
     </section>
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
-      <h2 class="section__title title-center" data-title="Entrar em contato">Participem da campanha e enviem suas mensagens</h2>
+      <h2 class="section__title title-center" data-title="Contato">Envie a sua mensagem e colabore para a nossa campanha!🫱🏼‍🫲🏼</h2>
 
       <div class="contact__container container grid">
         <div class="contact__details">
@@ -496,11 +522,12 @@
           <div class="form__input">
             <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="10"
               class="input__control textarea" required></textarea>
-              <div class="erro-mensagem" id="erroMensagem"></div>
+            <div class="erro-mensagem" id="erroMensagem"></div>
           </div>
           <!--<div id="erroMensagem" class="erro-mensagem"></div>-->
 
-          <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank" onclick="whats.metodos.validaMsg()">Enviar</a>
+          <a id="btnEnviarMsg" class="btn contact__btn" href="#" target="_blank"
+            onclick="whats.metodos.validaMsg()">Enviar</a>
         </form>
 
       </div>
@@ -509,7 +536,8 @@
   <!-- =============== LGPD ================== -->
   <div class="lgpd-msg" id="lgpd-msg">
     <div class="lgpd-txt">
-      <p>Em nosso site não usamos cookies, ao clicar em "Concordar e fechar", entendemos que está de acordo com a nossa 'Política de Privacidade' ou 'Termos e Condições' e declara estar ciente com os termos e diretrizes.</p>
+      <p class="txt-modal">Em nosso site não usamos cookies, ao clicar em "Concordar e fechar", entendemos que está de acordo com a nossa
+        'Política de Privacidade' ou 'Termos e Condições' e declara estar ciente com os termos e diretrizes.</p>
 
       <div class="lgpd-btn">
         <a href="policy.html" target="_blank" class="lgpdP">Política de Privacidade</a>
@@ -521,7 +549,8 @@
   <!--==================== FOOTER ====================-->
   <footer class="footer">
     <div class="footer__container box__container">
-      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" id="footerMoreira" class="footer__link" target="_blank" onclick="whats.metodos.abrirWhatsSocialFooterLink()">Rafael Moreira</a>.
+      <p class="footer__copyright">&copy; 2023 Desenvolvido por <a href="#" id="footerMoreira" class="footer__link"
+          target="_blank" onclick="whats.metodos.abrirWhatsSocialFooterLink()">Rafael Moreira</a>.
         Todos os direitos reservados.</p>
 
       <div class="footer__social-links">
@@ -529,7 +558,8 @@
         <a href="term.html" class="link__lgpd">Termos e Condições</a>
         <div class="footer__social-link">
 
-          <a href="#" target="_blank" class="footer__social-link" id="socialFooter" onclick="whats.metodos.abrirWhatsSocialFooter()">
+          <a href="#" target="_blank" class="footer__social-link" id="socialFooter"
+            onclick="whats.metodos.abrirWhatsSocialFooter()">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
 
@@ -554,4 +584,5 @@
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
