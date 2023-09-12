@@ -1580,10 +1580,6 @@ section.perguntas .itens .item p span {
 @media screen and (max-width: 576px) {}
 
 @media screen and (max-width: 425px) {
-  body {
-    font-size: var(--large-font-size);
-  }
-
   .data__title {
     font-size: var(--medium-font-size);
   }
@@ -1594,10 +1590,6 @@ section.perguntas .itens .item p span {
 
   .lgpd-txt {
     padding: 60px;
-  }
-
-  .btn-num {
-    font-size: var(--big-font-size);
   }  
 
 }
