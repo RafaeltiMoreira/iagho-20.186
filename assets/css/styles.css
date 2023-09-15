@@ -13,7 +13,7 @@
   --container-color: hsl(200, 10%, 8%);
   --border-color: hsl(0, 0%, 20%);
   --box-shadow-header: hsla(0, 0%, 0%, 0.5);
-  --box-shadow-detail: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+  --box-shadow-detail: 0 .1rem 1rem -.5rem rgba(0, 0, 0, .4);
   --color-link: hsl(225, 73%, 57%);
 
   --color-whats: #FFF;
@@ -716,23 +716,24 @@ input[type="checkbox"] {
 
 .services__description {
   /*margin-block: 0 1rem;*/
-    padding: 1rem;
-    /* line-height: 1.5; */
-    letter-spacing: 1px;
-    color: var(--white);
-    background-color: var(--container-color);
-    font-weight: 600;
-    border-radius: 0 0 0.5rem 0.5rem;
-    box-shadow: 0 0.1rem 1rem -0.5rem rgba(0,0,0,.4);
-    border: 1px solid var(--border-color);
+  padding: 1rem;
+  /* line-height: 1.5; */
+  letter-spacing: 1px;
+  color: var(--white);
+  background-color: var(--container-color);
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, .4);
+  border: 1px solid var(--border-color);
 }
 
 .services__title {
+  margin-block: 3rem 0;
   color: var(--white);
-    font-weight: var(--weight-600);
-    padding: 50px 30px 50px 30px;
-    background-color: var(--first-color);
-    border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: var(--weight-600);
+  padding: 50px 30px 50px 30px;
+  background-color: var(--first-color);
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .services__description-vote {
@@ -748,7 +749,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   border-radius: 0 0 0.5rem 0.5rem;
-  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0,0,0,.4);
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, .4);
   gap: 1.5rem;
   border: 1px solid var(--border-color);
 }
@@ -758,19 +759,20 @@ input[type="checkbox"] {
 }
 
 .btn-a {
-  background-color: var(--bg-whats-green);
-  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0,0,0,.4);
-  color: var(--white);
   font-size: var(--larger-font-size);
-  display: flex;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  padding: 15px 15px;
   font-weight: 600;
-  cursor: pointer;
+  color: var(--white);
+  background-color: var(--bg-whats-green);
+  border-radius: 0.5rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 15px 15px;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-services {
@@ -1305,6 +1307,10 @@ section.perguntas .itens .item p span {
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .item__icon {
+    font-size: 1.2rem;
+  }
+
   .section {
     padding-block: 0.5rem;
   }
@@ -1618,8 +1624,8 @@ section.perguntas .itens .item p span {
   }
 
   .lgpd-txt {
-    padding: 60px;
-  }  
+    padding: 60px 20px;
+  }
 
 }
 
