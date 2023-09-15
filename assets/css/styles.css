@@ -25,6 +25,7 @@
 
   --body-font: 'Poppins', sans-serif;
   --monster-font-size: 6rem;
+  --md-font-size: 4rem;
   --full-font-size: 3.75rem;
   --big-font-size: 3rem;
   --h1-font-size: 2.5rem;
@@ -764,7 +765,7 @@ input[type="checkbox"] {
   color: var(--white);
   background-color: var(--bg-whats-green);
   border-radius: 0.5rem;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -935,6 +936,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   column-gap: 1.25rem;
+  font-size: var(--larger-font-size);
 }
 
 .footer__social-links-lgpd {
@@ -1262,7 +1264,30 @@ section.perguntas .itens .item p span {
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+  .about__data {
+    font-size: var(--large-font-size);
+  }
+
+  .footer__social-link {
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-size: var(--sm-font-size);
+  }
+
+  .footer__social-links {
+    font-size: var(--sm-font-size);
+    column-gap: 0.25rem;
+  }
+
+  .link__lgpd {
+    font-family: var(--sm-font-size);
+  }
+
+  .footer__copyright {
+    font-size: var(--sm-font-size);
+  }
+}
 
 @media screen and (max-width: 992px) {
   .txt-modal {
@@ -1604,15 +1629,7 @@ section.perguntas .itens .item p span {
 
 }
 
-@media screen and (max-width: 368px) {
-  body {
-    font-size: var(--large-font-size);
-  }
-
-  .btn-num {
-    font-size: var(--full-font-size);
-  }
-}
+@media screen and (max-width: 368px) {}
 
 @media screen and (max-width: 425px) {
   .data__title {
@@ -1641,5 +1658,21 @@ section.perguntas .itens .item p span {
     padding: 50px 30px;
     margin: 0 10px 0 0;
     border: 1px solid var(--border-color);
+  }
+
+  body {
+    font-size: var(--large-font-size);
+  }
+
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .btn-num {
+    font-size: var(--full-font-size);
+  }
+
+  .home__description {
+    font-size: var(--large-font-size);
   }
 }
