@@ -1660,8 +1660,8 @@ section.perguntas .itens .item p span {
     border: 1px solid var(--border-color);
   }
 
-  body {
-    font-size: var(--large-font-size);
+  .about__data {
+    font-size: var(--medium-font-size);
   }
 
   .container {
