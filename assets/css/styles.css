@@ -1187,6 +1187,7 @@ section.perguntas .itens .item p span {
   transform: translate(-50%);
   border-radius: 10px;
   display: none;
+  border: 1px solid var(--border-color);
 }
 
 .lgpd-msg.show {
