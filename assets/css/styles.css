@@ -7,18 +7,18 @@
   --first-color-dark: hsl(268, 78%, 51%);
   --first-color-light: hsl(268, 100%, 83%);
 
-  --title-color: hsl(0, 0%, 87%);
-  --text-color: hsl(0, 0%, 69%);
-  --body-color: hsl(200, 12%, 5%);
-  --container-color: hsl(200, 10%, 8%);
-  --border-color: hsl(0, 0%, 20%);
+  --title-color: hsl(247, 27%, 31%);
+  --text-color: hsl(0, 0%, 41%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(266, 78%, 98%);
+  --border-color: hsl(0, 0%, 87%);
   --box-shadow-header: hsla(0, 0%, 0%, 0.5);
-  --box-shadow-detail: 0 .1rem 1rem -.5rem rgba(0, 0, 0, .4);
+  --box-shadow-detail: 0 .1rem 1rem -.5rem rgba(254, 254, 254);
   --color-link: hsl(225, 73%, 57%);
 
   --color-whats: #FFF;
   --bg-whats-green: #14b077;
-  --white: #FFF;
+  --white: #000;
   --red: #ec1838;
 
   /*========== Fontes ==========*/
@@ -50,14 +50,14 @@
 /*=============== DARK THEME ===============*/
 
 #day-night:checked~* {
-  --title-color: hsl(247, 27%, 31%);
-  --text-color: hsl(0, 0%, 41%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(266, 78%, 98%);
-  --border-color: hsl(0, 0%, 87%);
+  --title-color: hsl(0, 0%, 87%);
+  --text-color: hsl(0, 0%, 69%);
+  --body-color: hsl(200, 12%, 5%);
+  --container-color: hsl(200, 10%, 8%);
+  --border-color: hsl(0, 0%, 20%);
   --first-color: hsl(225, 73%, 57%);
-  --box-shadow-detail: 0 .1rem 1rem -.5rem rgb(254, 254, 254);
-  --white: #000;
+  --box-shadow-detail: 0 .1rem 1rem -.5rem rgb(0, 0, 0, .4);
+  --white: #FFF;
 }
 
 /*=============== BASE ===============*/
@@ -238,15 +238,15 @@ input[type="checkbox"] {
   bottom: 7%;
 }
 
-.style__switcher-theme .fa-moon {
-  display: none;
-}
-
-#day-night:checked~* .fa-sun {
+.style__switcher-theme .fa-sun {
   display: none;
 }
 
 #day-night:checked~* .fa-moon {
+  display: none;
+}
+
+#day-night:checked~* .fa-sun {
   display: block;
 }
 
@@ -424,7 +424,7 @@ input[type="checkbox"] {
 
 .home {
   background-color: var(--container-color);
-  padding-block: 15rem 12rem;
+  padding-block: 12rem;
   transition: all 0.5s ease;
 }
 
